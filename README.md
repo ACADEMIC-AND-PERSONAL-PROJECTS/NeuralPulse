@@ -17,7 +17,7 @@ Pipeline automatique qui scrappe 12 sources IA chaque semaine, les résume via G
 
 ```mermaid
 flowchart LR
-    CRON["⏰ Cron\nSAMEDI 9h Paris"] --> FETCH
+    CRON["⏰ Cron\nSAMEDI 9h Dakar"] --> FETCH
 
     subgraph FETCH["📡 NewsFetcherService"]
         direction TB

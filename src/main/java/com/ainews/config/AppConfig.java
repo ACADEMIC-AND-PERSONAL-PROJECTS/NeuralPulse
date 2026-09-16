@@ -24,7 +24,7 @@ public class AppConfig {
 
     @Bean
     public ZoneId appTimezone() {
-        return ZoneId.of("Europe/Paris");
+        return ZoneId.of("Africa/Dakar");
     }
 
     public int getDaysLookback() {

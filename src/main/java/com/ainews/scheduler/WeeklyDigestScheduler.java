@@ -42,7 +42,7 @@ public class WeeklyDigestScheduler {
         this.appTimezone = appTimezone;
     }
 
-    @Scheduled(cron = "0 0 9 * * SAT", zone = "Europe/Paris")
+    @Scheduled(cron = "0 0 9 * * SAT", zone = "Africa/Dakar")
     public void executeWeeklyDigest() {
         log.info("=== Starting weekly digest ===");
 
