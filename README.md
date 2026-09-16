@@ -5,74 +5,10 @@ Pipeline automatique qui scrappe 12 sources IA chaque semaine, les résume via G
 ## Architecture
 
 <p align="center">
-  <img src="docs/architecture.gif" alt="AI News Digest Architecture" width="100%">
+  <img src="docs/architecture.png" alt="AI News Digest Architecture" width="100%" style="border-radius: 12px;">
 </p>
 
-<details>
-<summary>Vue interactive (pan/zoom, thème clair/sombre)</summary>
-
-**[Ouvrir le diagramme interactif](docs/architecture.html)** — clic pour explorer avec vues guidées.
-
-</details>
-
-```mermaid
-flowchart LR
-    CRON["⏰ Cron\nSAMEDI 9h Dakar"] --> FETCH
-
-    subgraph FETCH["📡 NewsFetcherService"]
-        direction TB
-        S1["OpenAI"] --> PAR
-        S2["Anthropic"] --> PAR
-        S3["DeepMind"] --> PAR
-        S4["Meta AI"] --> PAR
-        S5["Mistral"] --> PAR
-        S6["HuggingFace"] --> PAR
-        S7["The Batch"] --> PAR
-        S8["TLDR AI"] --> PAR
-        S9["Import AI"] --> PAR
-        S10["Rundown AI"] --> PAR
-        S11["Papers With Code"] --> PAR
-        S12["daily.dev"] --> PAR
-        PAR["4 threads\nJSoup HTTP"]
-    end
-
-    FETCH -->|"514 items"| DEDUP
-
-    subgraph DEDUP["🔍 DeduplicationService"]
-        FILTRE["Filtre doublons\n+ scoring"]
-    end
-
-    DEDUP -->|"178 uniques"| PROC
-
-    subgraph PROC["🧠 NewsProcessorService"]
-        direction TB
-        SEL["Sélection top 25"] --> GROQ
-        GROQ["Groq API\nqwen3.8-27b"] --> CLEAN["Nettoyage\nMarkdown"]
-    end
-
-    PROC --> ARCH
-    PROC -->|"fallback si erreur"| FALLBACK["📋 Digest brut\nsans LLM"]
-
-    subgraph ARCH["💾 ArchiveService"]
-        MD["news/week-YYYY-MM-DD.md"]
-    end
-
-    ARCH --> TGSVC
-
-    subgraph TGSVC["📤 TelegramService"]
-        MSG["Envoi message\n4000 chars max"]
-    end
-
-    TGSVC --> TGAPI["🤖 Telegram Bot API"]
-
-    BOT["DigestBot\n/start · /status"] <-->|"long polling"| TGAPI
-
-    style CRON fill:#f59e0b,stroke:#d97706,color:#000
-    style GROQ fill:#8b5cf6,stroke:#7c3aed,color:#fff
-    style TGAPI fill:#38bdf8,stroke:#0ea5e9,color:#000
-    style MD fill:#10b981,stroke:#059669,color:#fff
-    style FALLBACK fill:#f97316,stroke:#ea580c,color:#fff
-```
+> **[Vue interactive animée](https://academic-and-personal-projects.github.io/NeuralPulse/)** — pan/zoom, thème clair/sombre, vues guidées.
 
 ## Stack
 
@@ -112,6 +48,10 @@ sudo journalctl -u ai-news-digest -f
 | `/health` | GET | État du service + dernière exécution |
 | `/api/test-digest` | POST | Déclenche un digest manuel |
 
+<p align="center">
+  <img src="docs/test.png" alt="Telegram Digest Output" width="400" style="border-radius: 12px;">
+</p>
+
 ## Configuration
 
 Variables d'environnement (`.env`) :
@@ -142,3 +82,7 @@ GROQ_API=...
 ## License
 
 Projet personnel — étudiant en IA & Big Data.
+
+---
+
+**[Vue interactive de l'architecture](https://academic-and-personal-projects.github.io/NeuralPulse/)**
