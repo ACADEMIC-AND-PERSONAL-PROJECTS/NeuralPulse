@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    url: jdbc:sqlite:/app/data/digest.db
+    driver-class-name: org.sqlite.JDBC
+
+app:
+  news:
+    archive-dir: /app/news

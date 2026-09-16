@@ -1,0 +1,22 @@
+# Maven
+target/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# Env
+.env
+
+# Logs
+logs/
+*.log
+
+# News archive (keep dir, ignore files)
+news/*
+!news/.gitkeep
+
+# OS
+.DS_Store
+Thumbs.db
