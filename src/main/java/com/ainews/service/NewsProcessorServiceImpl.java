@@ -19,9 +19,9 @@ import java.util.stream.Collectors;
 public class NewsProcessorServiceImpl implements NewsProcessorService {
 
     private static final Logger log = LoggerFactory.getLogger(NewsProcessorServiceImpl.class);
-    private static final int MAX_ITEMS_FOR_LLM = 40;
+    private static final int MAX_ITEMS_FOR_LLM = 25;
     private static final int MAX_CHARS_PER_ITEM = 200;
-    private static final int MAX_PROMPT_CHARS = 20000;
+    private static final int MAX_PROMPT_CHARS = 12000;
 
     private static final String SYSTEM_PROMPT = """
             Tu es un professeur pédagogique spécialisé en Intelligence Artificielle et Big Data.
@@ -75,7 +75,7 @@ public class NewsProcessorServiceImpl implements NewsProcessorService {
             JsonObject request = new JsonObject();
             request.addProperty("model", groqConfig.getModel());
             request.addProperty("temperature", 0.7);
-            request.addProperty("max_tokens", 4096);
+            request.addProperty("max_tokens", 1000);
 
             request.add("messages", gson.toJsonTree(List.of(
                     Map.of("role", "system", "content", SYSTEM_PROMPT),
