@@ -111,7 +111,7 @@ Archivé dans : news/week-{date}.md
 ### 3.5 Planification
 
 - **Cron Spring** : `@Scheduled(cron = "0 0 9 * * SAT")` — tous les samedis à 9h
-- **Timezone** : Europe/Paris (ou timezone du serveur, configurable)
+- **Timezone** : Africa/Dakar (Sénégal)
 - **Orchestration :**
   1. Fetch toutes les sources en parallèle (CompletableFuture)
   2. Dédoublonner + filtrer par date
