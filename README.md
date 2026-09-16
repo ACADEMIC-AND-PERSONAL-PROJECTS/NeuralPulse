@@ -23,17 +23,16 @@
 
 <br/><br/>
 
-<img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGxranZtb2xzNGJueDE4MDR1cmMzbHljaDJ2OGZvOGJ1eWZoOWM1YyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/JYZWs0UkzK2WKBoCUM/200.gif" width="280" alt="Cyberpunk Edgerunners Anime GIF"/>
+<img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGxranZtb2xzNGJueDE4MDR1cmMzbHljaDJ2OGZvOGJ1eWZoOWM1YyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/JYZWs0UkzK2WKBoCUM/200.gif" width="280" alt="Cyberpunk Edgerunners Anime GIF" style="border-radius:16px;"/>
 &nbsp;&nbsp;&nbsp;
-<img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGxranZtb2xzNGJueDE4MDR1cmMzbHljaDJ2OGZvOGJ1eWZoOWM1YyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/hWh8fislMRtp0bFUuE/200.gif" width="280" alt="Cyberpunk Edgerunners Hacker GIF"/>
+<img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGxranZtb2xzNGJueDE4MDR1cmMzbHljaDJ2OGZvOGJ1eWZoOWM1YyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/hWh8fislMRtp0bFUuE/200.gif" width="280" alt="Cyberpunk Edgerunners Hacker GIF" style="border-radius:16px;"/>
 
 <br/><br/>
 
 </div>
 
----
 
-## Architecture Interactive
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0014,50:2d1b69,100:6b21a8&height=110&section=header&text=Architecture%20Interactive&fontSize=28&fontColor=e9d5ff&fontAlign=50&fontAlignY=65&animation=fadeIn" width="100%"/>
 
 <p align="center">
   <a href="https://academic-and-personal-projects.github.io/NeuralPulse/">
@@ -50,7 +49,7 @@
   </a>
 </p>
 
----
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:6b21a8,50:2d1b69,100:0a0014&height=80&section=footer" width="100%"/>
 
 ## C'est quoi NeuralPulse ?
 
@@ -59,7 +58,7 @@
 > Archivage Markdown automatique. Zéro intervention humaine. ☕
 
 <div align="center">
-<img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGxranZtb2xzNGJueDE4MDR1cmMzbHljaDJ2OGZvOGJ1eWZoOWM1YyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/oubw3nxql0w3cVbN6N/200.gif" width="300" alt="Anime Hacker Chill GIF — Adult Swim"/>
+<img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGxranZtb2xzNGJueDE4MDR1cmMzbHljaDJ2OGZvOGJ1eWZoOWM1YyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/oubw3nxql0w3cVbN6N/200.gif" width="300" alt="Anime Hacker Chill GIF — Adult Swim" style="border-radius:16px;"/>
 </div>
 
 ---
@@ -142,13 +141,13 @@
 
 ---
 
-## Output — Telegram
+## 📨 Output — Telegram
 
 <p align="center">
   <picture>
     <img src="docs/test.png"
          alt="NeuralPulse — Telegram Digest Output"
-         width="500"
+         width="620"
          style="border-radius: 24px; box-shadow: 0 0 50px rgba(0,136,204,0.30), 0 16px 48px rgba(0,0,0,0.65); border: 1px solid rgba(255,255,255,0.06);" />
   </picture>
   <br/>
@@ -321,10 +320,6 @@ Groq API          : 30 req/min · 14 400 req/jour (gratuit)
 
 <div align="center">
 
-<img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGxranZtb2xzNGJueDE4MDR1cmMzbHljaDJ2OGZvOGJ1eWZoOWM1YyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/kcKpORRzy95ofrqAEp/giphy.gif" width="260" alt="Anime hacker GIF"/>
+<img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGxranZtb2xzNGJueDE4MDR1cmMzbHljaDJ2OGZvOGJ1eWZoOWM1YyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/rzrF4bm9nDMdu47z3M/200.gif" width="300" alt="Anime Hacker Intro GIF" style="border-radius:16px;"/>
 
-<br/><br/>
-
-[![Architecture Interactive](https://img.shields.io/badge/🗺️%20Architecture%20Interactive-Voir%20en%20live-a855f7?style=for-the-badge)](https://academic-and-personal-projects.github.io/NeuralPulse/)
-
-</div>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0014,50:2d1b69,100:6b21a8&height=100&section=footer" width="100%"/>
