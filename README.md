@@ -35,7 +35,7 @@
 
 <p align="center">
   <a href="https://academic-and-personal-projects.github.io/NeuralPulse/">
-    <img src="docs/architecture.png"
+    <img src="docs/arch-v2.png"
          alt="NeuralPulse Architecture — AI News Digest Pipeline"
          width="100%" />
   </a>
