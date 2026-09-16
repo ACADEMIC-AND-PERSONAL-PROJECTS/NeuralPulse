@@ -145,7 +145,7 @@
   <picture>
     <img src="docs/test.png"
          alt="NeuralPulse — Telegram Digest Output"
-         width="620" />
+         width="80%" />
   </picture>
   <br/>
   <sub><sup>📱 Aperçu du bot Telegram — <strong>AUTOMATED_VT</strong> · digest du 2026-09-16</sup></sub>
