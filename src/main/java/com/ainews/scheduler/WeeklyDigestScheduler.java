@@ -88,9 +88,9 @@ public class WeeklyDigestScheduler {
 
                 %s
 
-                ---
-                Sources : OpenAI, Anthropic, DeepMind, Meta AI, Mistral, Hugging Face, The Batch, TLDR AI, Import AI, The Rundown AI, Papers With Code, daily.dev
-                Archivé dans : news/week-%s.md
+                ———
+                📡 Sources : OpenAI, Anthropic, DeepMind, Meta AI, Mistral, Hugging Face, The Batch, TLDR AI, Import AI, The Rundown AI, Papers With Code, daily.dev
+                📁 Archivé dans : news/week-%s.md
                 """.formatted(weekDate, digest, weekDate);
     }
 }

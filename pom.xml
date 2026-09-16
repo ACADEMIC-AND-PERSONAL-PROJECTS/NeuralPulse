@@ -20,7 +20,7 @@
     <properties>
         <java.version>17</java.version>
         <jsoup.version>1.18.1</jsoup.version>
-        <telegrambots.version>6.9.7.1</telegrambots.version>
+        <telegrambots.version>10.3.0</telegrambots.version>
     </properties>
 
     <dependencies>
@@ -45,7 +45,7 @@
 
         <dependency>
             <groupId>org.telegram</groupId>
-            <artifactId>telegrambots</artifactId>
+            <artifactId>telegrambots-springboot-longpolling-starter</artifactId>
             <version>${telegrambots.version}</version>
         </dependency>
 
