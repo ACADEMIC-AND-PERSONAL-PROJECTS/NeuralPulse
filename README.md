@@ -73,7 +73,7 @@
   <img src="https://cdn.simpleicons.org/telegram/26A5E4"                                   width="52" title="Telegram" />&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" width="52" title="Oracle Cloud" />&nbsp;&nbsp;
   <img src="docs/groq.svg" width="52" title="Groq" />&nbsp;&nbsp;
-  <img src="docs/jsoup.svg" width="52" title="JSoup" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="52" title="JSoup" />
 </p>
 
 <br/>
@@ -90,7 +90,7 @@
 | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/maven/maven-original.svg" width="22"/> **Maven** | Build tool | Gestion des dépendances |
 | <img src="docs/groq.svg" width="22"/> **Groq API** | LLM Cloud | qwen/qwen3.8-27b — ultra rapide |
 | <img src="https://cdn.simpleicons.org/telegram/26A5E4" width="22"/> **TelegramBots** | v10.3.0 | Long-polling, envoi digest |
-| <img src="docs/jsoup.svg" width="22"/> **JSoup** | v1.18.1 | Scraping HTML robuste |
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="22"/> **JSoup** | v1.18.1 | Scraping HTML robuste |
 | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" width="22"/> **Oracle Cloud** | Free Tier | 1 OCPU, 1GB RAM, VPS |
 
 </div>
