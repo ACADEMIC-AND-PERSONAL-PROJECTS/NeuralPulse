@@ -22,9 +22,9 @@
 
 <br/><br/>
 
-<img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGxranZtb2xzNGJueDE4MDR1cmMzbHljaDJ2OGZvOGJ1eWZoOWM1YyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/JYZWs0UkzK2WKBoCUM/200.gif" width="280" alt="Cyberpunk Edgerunners Anime GIF" />
+<img src="docs/gif1.gif" width="280" alt="Cyberpunk Edgerunners Anime GIF" />
 &nbsp;&nbsp;&nbsp;
-<img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGxranZtb2xzNGJueDE4MDR1cmMzbHljaDJ2OGZvOGJ1eWZoOWM1YyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/hWh8fislMRtp0bFUuE/200.gif" width="280" alt="Cyberpunk Edgerunners Hacker GIF" />
+<img src="docs/gif2.gif" width="280" alt="Cyberpunk Edgerunners Hacker GIF" />
 
 <br/><br/>
 
@@ -56,7 +56,7 @@
 > Archivage Markdown automatique. Zéro intervention humaine. ☕
 
 <div align="center">
-<img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGxranZtb2xzNGJueDE4MDR1cmMzbHljaDJ2OGZvOGJ1eWZoOWM1YyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/oubw3nxql0w3cVbN6N/200.gif" width="300" alt="Anime Hacker Chill GIF — Adult Swim" />
+<img src="docs/gif3.gif" width="300" alt="Anime Hacker Chill GIF — Adult Swim" />
 </div>
 
 ---
@@ -317,6 +317,6 @@ Groq API          : 30 req/min · 14 400 req/jour (gratuit)
 
 <div align="center">
 
-<img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGxranZtb2xzNGJueDE4MDR1cmMzbHljaDJ2OGZvOGJ1eWZoOWM1YyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/rzrF4bm9nDMdu47z3M/200.gif" width="300" alt="Anime Hacker Intro GIF" />
+<img src="docs/gif4.gif" width="300" alt="Anime Hacker Intro GIF" />
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0014,50:2d1b69,100:6b21a8&height=100&section=footer" width="100%"/>
