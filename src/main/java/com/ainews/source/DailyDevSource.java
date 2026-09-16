@@ -14,7 +14,7 @@ import java.util.List;
 public class DailyDevSource extends AbstractHtmlSource {
 
     private static final String BASE_URL = "https://daily.dev";
-    private static final String AI_URL = BASE_URL + "/tagged/ai";
+    private static final String AI_URL = BASE_URL + "/s/ai";
 
     @Override
     public String getSourceName() {

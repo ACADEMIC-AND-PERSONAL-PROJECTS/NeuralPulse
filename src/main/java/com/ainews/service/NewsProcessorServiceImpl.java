@@ -10,6 +10,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -18,6 +19,9 @@ import java.util.stream.Collectors;
 public class NewsProcessorServiceImpl implements NewsProcessorService {
 
     private static final Logger log = LoggerFactory.getLogger(NewsProcessorServiceImpl.class);
+    private static final int MAX_ITEMS_FOR_LLM = 40;
+    private static final int MAX_CHARS_PER_ITEM = 150;
+    private static final int MAX_PROMPT_CHARS = 20000;
 
     private final RestClient groqRestClient;
     private final GroqConfig groqConfig;
@@ -34,11 +38,11 @@ public class NewsProcessorServiceImpl implements NewsProcessorService {
             return "Aucune actualité IA majeure cette semaine. Semaine calme !";
         }
 
-        String newsText = newsItems.stream()
-                .map(NewsItem::toRawText)
-                .collect(Collectors.joining("\n\n"));
-
+        List<NewsItem> selected = selectTopItems(newsItems);
+        String newsText = formatNewsForLLM(selected);
         String prompt = buildPrompt(newsText);
+
+        log.info("Sending {} items ({} chars) to Groq model {}", selected.size(), prompt.length(), groqConfig.getModel());
 
         try {
             JsonObject request = new JsonObject();
@@ -69,8 +73,32 @@ public class NewsProcessorServiceImpl implements NewsProcessorService {
 
         } catch (Exception e) {
             log.error("Error calling Groq API: {}", e.getMessage());
-            return "Erreur lors du traitement par le LLM. News brutes :\n\n" + newsText;
+            return buildFallbackDigest(newsItems);
         }
+    }
+
+    private List<NewsItem> selectTopItems(List<NewsItem> items) {
+        return items.stream()
+                .sorted(Comparator.comparing(item -> item.getTitle().length(), Comparator.reverseOrder()))
+                .limit(MAX_ITEMS_FOR_LLM)
+                .collect(Collectors.toList());
+    }
+
+    private String formatNewsForLLM(List<NewsItem> items) {
+        StringBuilder sb = new StringBuilder();
+        for (NewsItem item : items) {
+            String title = truncate(item.getTitle(), MAX_CHARS_PER_ITEM);
+            String source = item.getSource();
+            String line = String.format("[%s] %s", source, title);
+            if (sb.length() + line.length() + 2 > MAX_PROMPT_CHARS) break;
+            sb.append(line).append("\n");
+        }
+        return sb.toString();
+    }
+
+    private String truncate(String s, int max) {
+        if (s == null) return "";
+        return s.length() <= max ? s : s.substring(0, max - 3) + "...";
     }
 
     private String buildPrompt(String newsText) {
@@ -79,13 +107,25 @@ public class NewsProcessorServiceImpl implements NewsProcessorService {
 
                 %s
 
-                Analyse chaque news et fournis :
-                1. Un résumé clair et pédagogique (avec analogies si besoin)
+                Analyse les plus importantes et fournis :
+                1. Un résumé clair et pédagogique des 5-10 news les plus marquantes
                 2. Pourquoi c'est pertinent pour un étudiant ingénieur en IA & Big Data
-                3. Classe les 5-10 news les plus importantes de la semaine
 
                 Format : Markdown, ton professoral mais accessible.
                 Si la semaine est calme, dis-le et mentionne 2-3 petites choses à surveiller.
                 """.formatted(newsText);
+    }
+
+    private String buildFallbackDigest(List<NewsItem> items) {
+        StringBuilder sb = new StringBuilder();
+        sb.append("## News de la semaine\n\n");
+        int count = 0;
+        for (NewsItem item : items) {
+            if (count >= 10) break;
+            sb.append(String.format("- **%s** (%s)\n", item.getTitle(), item.getSource()));
+            count++;
+        }
+        sb.append("\n*Digest généré sans LLM (erreur API)*");
+        return sb.toString();
     }
 }
