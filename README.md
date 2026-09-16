@@ -2,8 +2,7 @@
 
 <img src="docs/banner.jpg"
      alt="NeuralPulse — Anime Coder Vibes"
-     width="100%"
-     style="border-radius: 0 0 24px 24px; box-shadow: 0 8px 40px rgba(168,85,247,0.25);" />
+     width="100%" />
 
 <br/>
 
@@ -23,9 +22,9 @@
 
 <br/><br/>
 
-<img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGxranZtb2xzNGJueDE4MDR1cmMzbHljaDJ2OGZvOGJ1eWZoOWM1YyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/JYZWs0UkzK2WKBoCUM/200.gif" width="280" alt="Cyberpunk Edgerunners Anime GIF" style="border-radius:16px;"/>
+<img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGxranZtb2xzNGJueDE4MDR1cmMzbHljaDJ2OGZvOGJ1eWZoOWM1YyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/JYZWs0UkzK2WKBoCUM/200.gif" width="280" alt="Cyberpunk Edgerunners Anime GIF" />
 &nbsp;&nbsp;&nbsp;
-<img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGxranZtb2xzNGJueDE4MDR1cmMzbHljaDJ2OGZvOGJ1eWZoOWM1YyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/hWh8fislMRtp0bFUuE/200.gif" width="280" alt="Cyberpunk Edgerunners Hacker GIF" style="border-radius:16px;"/>
+<img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGxranZtb2xzNGJueDE4MDR1cmMzbHljaDJ2OGZvOGJ1eWZoOWM1YyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/hWh8fislMRtp0bFUuE/200.gif" width="280" alt="Cyberpunk Edgerunners Hacker GIF" />
 
 <br/><br/>
 
@@ -38,8 +37,7 @@
   <a href="https://academic-and-personal-projects.github.io/NeuralPulse/">
     <img src="docs/architecture.png"
          alt="NeuralPulse Architecture — AI News Digest Pipeline"
-         width="100%"
-         style="border-radius: 20px; box-shadow: 0 0 40px rgba(168,85,247,0.35), 0 8px 32px rgba(0,0,0,0.6);" />
+         width="100%" />
   </a>
 </p>
 
@@ -58,7 +56,7 @@
 > Archivage Markdown automatique. Zéro intervention humaine. ☕
 
 <div align="center">
-<img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGxranZtb2xzNGJueDE4MDR1cmMzbHljaDJ2OGZvOGJ1eWZoOWM1YyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/oubw3nxql0w3cVbN6N/200.gif" width="300" alt="Anime Hacker Chill GIF — Adult Swim" style="border-radius:16px;"/>
+<img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGxranZtb2xzNGJueDE4MDR1cmMzbHljaDJ2OGZvOGJ1eWZoOWM1YyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/oubw3nxql0w3cVbN6N/200.gif" width="300" alt="Anime Hacker Chill GIF — Adult Swim" />
 </div>
 
 ---
@@ -74,8 +72,8 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/maven/maven-original.svg"   width="52" title="Maven" />&nbsp;&nbsp;
   <img src="https://cdn.simpleicons.org/telegram/26A5E4"                                   width="52" title="Telegram" />&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" width="52" title="Oracle Cloud" />&nbsp;&nbsp;
-  <img src="https://avatars.githubusercontent.com/u/132372032?s=200&v=4" width="52" style="border-radius:12px;" title="Groq" />&nbsp;&nbsp;
-  <img src="https://avatars.githubusercontent.com/u/6637625?v=4"         width="52" style="border-radius:12px;" title="JSoup" />
+  <img src="https://avatars.githubusercontent.com/u/132372032?s=200&v=4" width="52" title="Groq" />&nbsp;&nbsp;
+  <img src="https://avatars.githubusercontent.com/u/6637625?v=4"         width="52" title="JSoup" />
 </p>
 
 <br/>
@@ -90,9 +88,9 @@
 | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" width="22"/> **SQLite** | JDBC 3.53 | Archivage léger, 0 serveur |
 | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="22"/> **Docker** | Compose | Déploiement reproductible |
 | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/maven/maven-original.svg" width="22"/> **Maven** | Build tool | Gestion des dépendances |
-| <img src="https://avatars.githubusercontent.com/u/132372032?s=200&v=4" width="22" style="border-radius:6px;"/> **Groq API** | LLM Cloud | qwen/qwen3.8-27b — ultra rapide |
+| <img src="https://avatars.githubusercontent.com/u/132372032?s=200&v=4" width="22"/> **Groq API** | LLM Cloud | qwen/qwen3.8-27b — ultra rapide |
 | <img src="https://cdn.simpleicons.org/telegram/26A5E4" width="22"/> **TelegramBots** | v10.3.0 | Long-polling, envoi digest |
-| <img src="https://avatars.githubusercontent.com/u/6637625?v=4" width="22" style="border-radius:6px;"/> **JSoup** | v1.18.1 | Scraping HTML robuste |
+| <img src="https://avatars.githubusercontent.com/u/6637625?v=4" width="22"/> **JSoup** | v1.18.1 | Scraping HTML robuste |
 | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" width="22"/> **Oracle Cloud** | Free Tier | 1 OCPU, 1GB RAM, VPS |
 
 </div>
@@ -147,8 +145,7 @@
   <picture>
     <img src="docs/test.png"
          alt="NeuralPulse — Telegram Digest Output"
-         width="620"
-         style="border-radius: 24px; box-shadow: 0 0 50px rgba(0,136,204,0.30), 0 16px 48px rgba(0,0,0,0.65); border: 1px solid rgba(255,255,255,0.06);" />
+         width="620" />
   </picture>
   <br/>
   <sub><sup>📱 Aperçu du bot Telegram — <strong>AUTOMATED_VT</strong> · digest du 2026-09-16</sup></sub>
@@ -320,6 +317,6 @@ Groq API          : 30 req/min · 14 400 req/jour (gratuit)
 
 <div align="center">
 
-<img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGxranZtb2xzNGJueDE4MDR1cmMzbHljaDJ2OGZvOGJ1eWZoOWM1YyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/rzrF4bm9nDMdu47z3M/200.gif" width="300" alt="Anime Hacker Intro GIF" style="border-radius:16px;"/>
+<img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGxranZtb2xzNGJueDE4MDR1cmMzbHljaDJ2OGZvOGJ1eWZoOWM1YyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/rzrF4bm9nDMdu47z3M/200.gif" width="300" alt="Anime Hacker Intro GIF" />
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0014,50:2d1b69,100:6b21a8&height=100&section=footer" width="100%"/>
