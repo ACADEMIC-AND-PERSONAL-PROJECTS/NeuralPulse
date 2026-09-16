@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="docs/banner.jpg"
+<img src="docs/banner.png"
      alt="NeuralPulse — Anime Coder Vibes"
      width="100%" />
 
