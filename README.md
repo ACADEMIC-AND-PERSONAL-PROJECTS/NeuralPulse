@@ -141,12 +141,12 @@
 
 <p align="center">
   <picture>
-    <img src="docs/test-slack.png"
-         alt="NeuralPulse — Telegram Digest Output"
+    <img src="docs/test-slack2.png"
+         alt="NeuralPulse — Slack Digest Output"
          width="80%" />
   </picture>
   <br/>
-  <sub><sup>💬 Le digest est envoyé via <strong>Slack Web API</strong> (<code>chat.postMessage</code>) dans le channel configuré</sup></sub>
+  <sub><sup>💬 Aperçu du bot Slack — <strong>NEWS-BOT</strong> · channel #ai-news</sup></sub>
 </p>
 
 > **Configuration :**
