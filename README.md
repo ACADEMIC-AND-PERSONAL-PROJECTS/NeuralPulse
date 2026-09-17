@@ -35,7 +35,7 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0014,50:2d1b69,100:6b21a8&height=110&section=header&text=Architecture%20Interactive&fontSize=28&fontColor=e9d5ff&fontAlign=50&fontAlignY=65&animation=fadeIn" width="100%"/>
 
 <p align="center">
-  <a href="https://academic-and-personal-projects.github.io/NeuralPulse/">
+  <a href="https://academic-and-personal-projects.github.io/NeuralPulse/architecture.html">
     <img src="docs/arch-v2.png"
          alt="NeuralPulse Architecture — AI News Digest Pipeline"
          width="100%" />
@@ -43,7 +43,7 @@
 </p>
 
 <p align="center">
-  <a href="https://academic-and-personal-projects.github.io/NeuralPulse/">
+  <a href="https://academic-and-personal-projects.github.io/NeuralPulse/architecture.html">
     <img src="https://img.shields.io/badge/🗺️%20Vue%20Interactive%20Animée-Pan%20%7C%20Zoom%20%7C%20Guided%20Views-a855f7?style=for-the-badge" alt="Vue interactive"/>
   </a>
 </p>
@@ -72,7 +72,7 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="52" title="Docker" />&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/maven/maven-original.svg"   width="52" title="Maven" />&nbsp;&nbsp;
   <img src="https://cdn.simpleicons.org/telegram/26A5E4"                                   width="52" title="Telegram" />&nbsp;&nbsp;
-  <img src="https://cdn.simpleicons.org/slack/4A154B"                                     width="52" title="Slack API" />&nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg"       width="52" title="Slack API" />&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" width="52" title="Oracle Cloud" />&nbsp;&nbsp;
   <img src="docs/groq.svg" width="52" title="Groq" />&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="52" title="JSoup" />
@@ -92,7 +92,7 @@
 | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/maven/maven-original.svg" width="22"/> **Maven** | Build tool | Gestion des dépendances |
 | <img src="docs/groq.svg" width="22"/> **Groq API** | LLM Cloud | qwen/qwen3.8-27b — ultra rapide |
 | <img src="https://cdn.simpleicons.org/telegram/26A5E4" width="22"/> **TelegramBots** | v10.3.0 | Long-polling, envoi digest |
-| <img src="https://cdn.simpleicons.org/slack/4A154B" width="22"/> **Slack API Client** | v1.51.0 | Web API, envoi digest |
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg" width="22"/> **Slack API Client** | v1.51.0 | Web API, envoi digest |
 | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="22"/> **JSoup** | v1.18.1 | Scraping HTML robuste |
 | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" width="22"/> **Oracle Cloud** | Free Tier | 1 OCPU, 1GB RAM, VPS |
 
@@ -102,42 +102,26 @@
 
 ## Pipeline de traitement
 
+<p align="center">
+  <a href="https://academic-and-personal-projects.github.io/NeuralPulse/architecture.html">
+    <img src="docs/architecture.html" alt="NeuralPulse Pipeline Architecture" width="100%" />
+  </a>
+  <br/>
+  <sub><sup>🗺️ <a href="https://academic-and-personal-projects.github.io/NeuralPulse/architecture.html">Ouvrir le diagramme interactif</a> — pan, zoom, vues guidées</sup></sub>
+</p>
+
 ```
-                    ╔══════════════════════════════════╗
-                    ║  🕘  CRON — Samedi 9h Dakar      ║
-                    ╚═════════════════╤════════════════╝
-                                      │  trigger
-                                      ▼
-                    ╔══════════════════════════════════╗
-                    ║  📡  NewsFetcherService          ║
-                    ║  4 threads parallèles            ║
-                    ║  OpenAI · Anthropic · DeepMind   ║
-                    ║  Meta · Mistral · HuggingFace    ║
-                    ║  TheBatch · TLDR · ImportAI      ║
-                    ║  Rundown · PapersWithCode · dev  ║
-                    ╚═════════════════╤════════════════╝
-                                      │  ~514 articles bruts
-                                      ▼
-                    ╔══════════════════════════════════╗
-                    ║  🧹  DeduplicationService        ║
-                    ║  Filtre 7 jours                  ║
-                    ║  Dédoublonnage par similarité    ║
-                    ╚═════════════════╤════════════════╝
-                                      │  ~178 uniques
-                                      ▼
-                    ╔══════════════════════════════════╗
-                    ║  🧠  NewsProcessorService        ║
-                    ║  → Groq LLM (qwen3.8-27b)        ║
-                    ║  Prompt pédagogique FR           ║
-                    ║  Top 5-10 news · Markdown        ║
-                    ╚═════════════════╤══════╤═════════════╝
-                                  │      │
-              ┌───────────────────┘      └───────────────────┐
-              ▼                      ▼                       ▼
- ╔════════════════════════╗  ╔════════════════════════╗  ╔════════════════════════╗
- ║  💾  ArchiveService    ║  ║  ✈️  TelegramService   ║  ║  💬  SlackService      ║
- ║  news/week-YYYY-MM.md  ║  ║  sendMessage + MD     ║  ║  chatPostMessage + MD  ║
- ╚════════════════════════╝  ╚════════════════════════╝  ╚════════════════════════╝
+CRON (SAT 9h) → NewsFetcher (12 sources, 4 threads)
+                    │ ~514 articles bruts
+                    ▼
+              DeduplicationService (Levenshtein)
+                    │ ~178 uniques
+                    ▼
+              NewsProcessorService → Groq LLM (qwen3.8-27b)
+                    │
+          ┌─────────┼─────────┐
+          ▼         ▼         ▼
+     Archive MD  Telegram   Slack
 ```
 
 ---
@@ -170,7 +154,7 @@
 ## 📨 Output — Slack
 
 <p align="center">
-  <img src="https://cdn.simpleicons.org/slack/4A154B" width="80" alt="Slack Logo" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg" width="80" alt="Slack Logo" />
   <br/>
   <sub><sup>💬 Le digest est envoyé via <strong>Slack Web API</strong> (<code>chat.postMessage</code>) dans le channel configuré</sup></sub>
 </p>
