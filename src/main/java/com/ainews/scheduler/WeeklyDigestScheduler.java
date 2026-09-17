@@ -5,6 +5,7 @@ import com.ainews.service.ArchiveService;
 import com.ainews.service.DeduplicationService;
 import com.ainews.service.NewsFetcherService;
 import com.ainews.service.NewsProcessorService;
+import com.ainews.service.SlackService;
 import com.ainews.service.TelegramService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,6 +27,7 @@ public class WeeklyDigestScheduler {
     private final NewsProcessorService newsProcessorService;
     private final ArchiveService archiveService;
     private final TelegramService telegramService;
+    private final SlackService slackService;
     private final ZoneId appTimezone;
 
     public WeeklyDigestScheduler(NewsFetcherService newsFetcherService,
@@ -33,12 +35,14 @@ public class WeeklyDigestScheduler {
                                   NewsProcessorService newsProcessorService,
                                   ArchiveService archiveService,
                                   TelegramService telegramService,
+                                  SlackService slackService,
                                   ZoneId appTimezone) {
         this.newsFetcherService = newsFetcherService;
         this.deduplicationService = deduplicationService;
         this.newsProcessorService = newsProcessorService;
         this.archiveService = archiveService;
         this.telegramService = telegramService;
+        this.slackService = slackService;
         this.appTimezone = appTimezone;
     }
 
@@ -68,11 +72,19 @@ public class WeeklyDigestScheduler {
             archiveService.archiveWeeklyDigest(fullMessage, weekDate);
 
             // 6. Send to Telegram
-            boolean sent = telegramService.sendMessage(fullMessage);
-            if (sent) {
+            boolean sentTelegram = telegramService.sendMessage(fullMessage);
+            if (sentTelegram) {
                 log.info("Weekly digest sent to Telegram successfully");
             } else {
                 log.warn("Failed to send digest to Telegram");
+            }
+
+            // 7. Send to Slack
+            boolean sentSlack = slackService.sendMessage(fullMessage);
+            if (sentSlack) {
+                log.info("Weekly digest sent to Slack successfully");
+            } else {
+                log.warn("Failed to send digest to Slack");
             }
 
         } catch (Exception e) {

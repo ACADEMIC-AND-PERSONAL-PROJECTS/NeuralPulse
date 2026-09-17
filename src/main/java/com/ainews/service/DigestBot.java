@@ -73,10 +73,20 @@ public class DigestBot implements SpringLongPollingBot {
         }
 
         List<String> chunks = new java.util.ArrayList<>();
-        String[] lines = message.split("\n");
         StringBuilder current = new StringBuilder();
 
-        for (String line : lines) {
+        for (String line : message.split("\n")) {
+            if (line.length() > MAX_MESSAGE_LENGTH) {
+                if (!current.isEmpty()) {
+                    chunks.add(current.toString());
+                    current = new StringBuilder();
+                }
+                for (int i = 0; i < line.length(); i += MAX_MESSAGE_LENGTH) {
+                    chunks.add(line.substring(i, Math.min(i + MAX_MESSAGE_LENGTH, line.length())));
+                }
+                continue;
+            }
+
             if (current.length() + line.length() + 1 > MAX_MESSAGE_LENGTH) {
                 chunks.add(current.toString());
                 current = new StringBuilder();

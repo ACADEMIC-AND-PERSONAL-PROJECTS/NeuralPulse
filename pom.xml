@@ -61,6 +61,12 @@
         </dependency>
 
         <dependency>
+            <groupId>com.slack.api</groupId>
+            <artifactId>slack-api-client</artifactId>
+            <version>1.51.0</version>
+        </dependency>
+
+        <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
         </dependency>

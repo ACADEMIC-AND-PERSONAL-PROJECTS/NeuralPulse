@@ -6,11 +6,11 @@
 
 <br/>
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=42&pause=1000&color=A855F7&center=true&vCenter=true&width=700&height=80&lines=NeuralPulse+%F0%9F%A7%A0;AI+News+Weekly+Digest;Powered+by+Groq+%2B+Telegram" alt="NeuralPulse" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=42&pause=1000&color=A855F7&center=true&vCenter=true&width=700&height=80&lines=NeuralPulse+%F0%9F%A7%A0;AI+News+Weekly+Digest;Powered+by+Groq+%2B+Telegram+%2B+Slack" alt="NeuralPulse" />
 
 <br/>
 
-<p><em>Pipeline automatique • Scraping IA • LLM • Telegram • Chaque samedi à 9h ☕</em></p>
+<p><em>Pipeline automatique • Scraping IA • LLM • Telegram + Slack • Chaque samedi à 9h ☕</em></p>
 
 <br/>
 
@@ -18,6 +18,7 @@
 <img src="https://img.shields.io/badge/version-1.0.0-a855f7?style=flat-square" alt="version"/>
 <img src="https://img.shields.io/badge/schedule-Every%20Saturday%209h-blue?style=flat-square" alt="schedule"/>
 <img src="https://img.shields.io/badge/sources-12%20AI%20feeds-ff6b6b?style=flat-square" alt="sources"/>
+<img src="https://img.shields.io/badge/platform-Telegram+%7C%20Slack-0088cc?style=flat-square&logo=slack&logoColor=white" alt="platforms"/>
 <img src="https://img.shields.io/badge/deploy-Oracle%20Cloud-red?style=flat-square&logo=oracle&logoColor=white" alt="oracle cloud"/>
 
 <br/><br/>
@@ -52,7 +53,7 @@
 ## C'est quoi NeuralPulse ?
 
 > **NeuralPulse** est un pipeline entièrement automatisé qui traque l'écosystème IA pour toi.  
-> Chaque **samedi à 9h**, il scrape **12 sources** (OpenAI, Anthropic, DeepMind…), déduplique, passe tout par un **LLM Groq ultra-rapide**, et t'envoie un digest **pédagogique en français** directement dans **Telegram**.  
+> Chaque **samedi à 9h**, il scrape **12 sources** (OpenAI, Anthropic, DeepMind…), déduplique, passe tout par un **LLM Groq ultra-rapide**, et t'envoie un digest **pédagogique en français** directement dans **Telegram** et **Slack**.  
 > Archivage Markdown automatique. Zéro intervention humaine. ☕
 
 <div align="center">
@@ -71,6 +72,7 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="52" title="Docker" />&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/maven/maven-original.svg"   width="52" title="Maven" />&nbsp;&nbsp;
   <img src="https://cdn.simpleicons.org/telegram/26A5E4"                                   width="52" title="Telegram" />&nbsp;&nbsp;
+  <img src="https://cdn.simpleicons.org/slack/4A154B"                                     width="52" title="Slack API" />&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" width="52" title="Oracle Cloud" />&nbsp;&nbsp;
   <img src="docs/groq.svg" width="52" title="Groq" />&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="52" title="JSoup" />
@@ -90,6 +92,7 @@
 | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/maven/maven-original.svg" width="22"/> **Maven** | Build tool | Gestion des dépendances |
 | <img src="docs/groq.svg" width="22"/> **Groq API** | LLM Cloud | qwen/qwen3.8-27b — ultra rapide |
 | <img src="https://cdn.simpleicons.org/telegram/26A5E4" width="22"/> **TelegramBots** | v10.3.0 | Long-polling, envoi digest |
+| <img src="https://cdn.simpleicons.org/slack/4A154B" width="22"/> **Slack API Client** | v1.51.0 | Web API, envoi digest |
 | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="22"/> **JSoup** | v1.18.1 | Scraping HTML robuste |
 | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" width="22"/> **Oracle Cloud** | Free Tier | 1 OCPU, 1GB RAM, VPS |
 
@@ -127,14 +130,14 @@
                     ║  → Groq LLM (qwen3.8-27b)        ║
                     ║  Prompt pédagogique FR           ║
                     ║  Top 5-10 news · Markdown        ║
-                    ╚═════════════╤══════╤═════════════╝
+                    ╚═════════════════╤══════╤═════════════╝
                                   │      │
-               ┌──────────────────┘      └──────────────────┐
-               ▼                                            ▼
-  ╔════════════════════════╗              ╔═══════════════════════════╗
-  ║  💾  ArchiveService    ║              ║  ✈️   TelegramService     ║
-  ║  news/week-YYYY-MM.md  ║              ║  sendMessage + Markdown   ║
-  ╚════════════════════════╝              ╚═══════════════════════════╝
+              ┌───────────────────┘      └───────────────────┐
+              ▼                      ▼                       ▼
+ ╔════════════════════════╗  ╔════════════════════════╗  ╔════════════════════════╗
+ ║  💾  ArchiveService    ║  ║  ✈️  TelegramService   ║  ║  💬  SlackService      ║
+ ║  news/week-YYYY-MM.md  ║  ║  sendMessage + MD     ║  ║  chatPostMessage + MD  ║
+ ╚════════════════════════╝  ╚════════════════════════╝  ╚════════════════════════╝
 ```
 
 ---
@@ -160,6 +163,22 @@
 > ---
 > Sources : OpenAI, Anthropic, DeepMind, ...
 > Archivé dans : news/week-{date}.md
+> ```
+
+---
+
+## 📨 Output — Slack
+
+<p align="center">
+  <img src="https://cdn.simpleicons.org/slack/4A154B" width="80" alt="Slack Logo" />
+  <br/>
+  <sub><sup>💬 Le digest est envoyé via <strong>Slack Web API</strong> (<code>chat.postMessage</code>) dans le channel configuré</sup></sub>
+</p>
+
+> **Configuration :**
+> ```env
+> SLACK_BOT_TOKEN=xoxb-xxxxx        # Bot OAuth Token (scope: chat:write)
+> SLACK_CHANNEL_ID=C0xxxxxxx        # Channel ID du workspace
 > ```
 
 ---
@@ -200,6 +219,8 @@ mvn clean package -DskipTests
 ```env
 TELEGRAM_BOT_TOKEN=123456:ABC-DEF...
 TELEGRAM_CHAT_ID=-100xxxxxxxxx
+SLACK_BOT_TOKEN=xoxb-xxxxx
+SLACK_CHANNEL_ID=C0xxxxxxx
 GROQ_API=gsk_xxxxxxxxxxxxxxxxxxxxx
 APP_PORT=8080
 ```
@@ -261,7 +282,7 @@ neuralpulse/
 │       │   ├── 🚀 AiNewsApplication.java
 │       │   ├── 📁 config/           # AppConfig, GroqConfig
 │       │   ├── 📁 model/            # NewsItem POJO
-│       │   ├── 📁 service/          # Fetch, Processor, Telegram, Archive, Dedup
+│       │   ├── 📁 service/          # Fetch, Processor, Telegram, Slack, Archive, Dedup
 │       │   ├── 📁 source/           # 12 SourceFetcher implementations
 │       │   ├── 📁 scheduler/        # WeeklyDigestScheduler (Cron SAT 9h)
 │       │   └── 📁 controller/       # HealthController

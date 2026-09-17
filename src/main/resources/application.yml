@@ -16,6 +16,8 @@ app:
     model: qwen/qwen3.8-27b
   telegram:
     chat-id: ${TELEGRAM_CHAT_ID:}
+  slack:
+    channel-id: ${SLACK_CHANNEL_ID:}
   news:
     archive-dir: ./news
     days-lookback: 7
