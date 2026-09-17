@@ -36,7 +36,7 @@
 
 <p align="center">
   <a href="https://academic-and-personal-projects.github.io/NeuralPulse/architecture.html">
-    <img src="docs/arch-v2.png"
+    <img src="docs/architecture.png"
          alt="NeuralPulse Architecture — AI News Digest Pipeline"
          width="100%" />
   </a>
@@ -104,25 +104,11 @@
 
 <p align="center">
   <a href="https://academic-and-personal-projects.github.io/NeuralPulse/architecture.html">
-    <img src="docs/architecture.html" alt="NeuralPulse Pipeline Architecture" width="100%" />
+    <img src="docs/architecture.png" alt="NeuralPulse Pipeline Architecture" width="100%" />
   </a>
   <br/>
   <sub><sup>🗺️ <a href="https://academic-and-personal-projects.github.io/NeuralPulse/architecture.html">Ouvrir le diagramme interactif</a> — pan, zoom, vues guidées</sup></sub>
 </p>
-
-```
-CRON (SAT 9h) → NewsFetcher (12 sources, 4 threads)
-                    │ ~514 articles bruts
-                    ▼
-              DeduplicationService (Levenshtein)
-                    │ ~178 uniques
-                    ▼
-              NewsProcessorService → Groq LLM (qwen3.8-27b)
-                    │
-          ┌─────────┼─────────┐
-          ▼         ▼         ▼
-     Archive MD  Telegram   Slack
-```
 
 ---
 
@@ -154,7 +140,11 @@ CRON (SAT 9h) → NewsFetcher (12 sources, 4 threads)
 ## 📨 Output — Slack
 
 <p align="center">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg" width="80" alt="Slack Logo" />
+  <picture>
+    <img src="docs/test-slack.png"
+         alt="NeuralPulse — Telegram Digest Output"
+         width="80%" />
+  </picture>
   <br/>
   <sub><sup>💬 Le digest est envoyé via <strong>Slack Web API</strong> (<code>chat.postMessage</code>) dans le channel configuré</sup></sub>
 </p>
